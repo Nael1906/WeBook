@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.KatalogBukuController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1080.0" />
+      <VBox fillWidth="false" layoutX="66.0" layoutY="36.0" prefHeight="628.0" prefWidth="949.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="949.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="247.0" HBox.hgrow="SOMETIMES">
+                     <children>
+                        <Button fx:id="logoutButton" layoutX="904.0" layoutY="-7.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="13.0" prefWidth="45.0" style="-fx-background-color: #FA0030;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Text layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Katalog Buku">
+                           <font>
+                              <Font name="System Bold" size="31.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="920.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                           <image>
+                              <Image url="@assets/white-arrow-icon-png-23.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20.0" translateY="15.0">
+               <children>
+                  <TextField fx:id="cariBukuTextField" prefHeight="31.0" prefWidth="303.0" promptText="Cari buku...">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="cariButton" mnemonicParsing="false" onAction="#searchButtonClicked" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #8056D2;" text="Cari" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="18.0" />
+               </VBox.margin>
+            </HBox>
+            <Button fx:id="historyButton" mnemonicParsing="false" onAction="#historyButtonClicked" prefHeight="33.0" prefWidth="158.0" style="-fx-background-color: #8056D2;" text="History" textFill="WHITE" translateX="790.0" translateY="-20.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="522.0" prefWidth="949.0" style="-fx-background-color: transparent;" translateY="-30.0">
+               <VBox.margin>
+                  <Insets top="27.0" />
+               </VBox.margin>
+               <content>
+                  <VBox fx:id="listBukuVBox" prefWidth="947.0" spacing="10.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

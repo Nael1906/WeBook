@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.HistoryPeminjamanController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1080.0" />
+      <VBox fillWidth="false" layoutX="66.0" layoutY="36.0" prefHeight="628.0" prefWidth="949.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="949.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
+                     <children>
+                        <Button fx:id="logoutButton" layoutX="895.0" layoutY="12.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #FA0030;">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="logoutButtonClicked" fitHeight="25.0" fitWidth="25.0" layoutX="907.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                           <image>
+                              <Image url="@assets/white-arrow-icon-png-23.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="pinjamBukuButton" layoutX="722.0" layoutY="12.0" mnemonicParsing="false" onAction="#pimjamBukuButtonClicked" prefHeight="38.0" prefWidth="158.0" style="-fx-background-color: #8056D2;" text="Pinjam Buku" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Text layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History Peminjaman">
+                           <font>
+                              <Font name="System Bold" size="41.0" />
+                           </font>
+                        </Text>
+                     </children></Pane>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="495.0" prefWidth="949.0" style="-fx-background-color: transparent;">
+               <VBox.margin>
+                  <Insets top="27.0" />
+               </VBox.margin>
+               <content>
+                  <VBox fx:id="peminjamanListVBox" prefWidth="947.0" spacing="10.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text fx:id="noHistoryText" strokeType="OUTSIDE" strokeWidth="0.0" text="Tidak ada history peminjaman :(" translateX="340.0" translateY="430.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <ImageView fx:id="noHistoryImage" fitHeight="469.0" fitWidth="495.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true" translateX="300.0" translateY="150.0">
+         <image>
+            <Image url="@assets/undraw_in_thought_re_qyxl.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
